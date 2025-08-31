@@ -139,7 +139,7 @@ The first transaction in an authchain is referred to as the **authbase transacti
 
 To resolve an authchain (a [zeroth-descendant transaction chain](#zeroth-descendant-transaction-chains)), clients must recursively identify the transaction that spent the output at index `0` of the current transaction, beginning with the authbase transaction. (Note, this process can be [accelerated using data from `authchain` extensions](#authchain-extension) in registries.)
 
-Once validated, clients should retain a mapping of the authbase to the latest identity input to accelerate future resolutions. To track an identity for future updates, clients should monitor the latest identity input for spends (e.g. wallets may monitor tracked identity outputs as if they were UTXOs held by the wallet).
+Once validated, clients should retain a mapping of the authbase to the latest identity output to accelerate future resolutions. To track an identity for future updates, clients should monitor the latest identity output for spends (e.g. wallets may monitor tracked identity outputs as if they were UTXOs held by the wallet).
 
 ##### Burned Identities
 

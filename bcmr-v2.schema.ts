@@ -396,13 +396,13 @@ export type ParsableNftCollection = {
    * `types`. If no match is found, clients should represent the NFT as
    * unable to be parsed.
    *
-   * For example: `00d2517f7c6b` (OP_0 OP_UTXOTOKENCOMMITMENT OP_1 OP_SPLIT
+   * For example: `00cf517f7c6b6b` (OP_0 OP_UTXOTOKENCOMMITMENT OP_1 OP_SPLIT
    * OP_SWAP OP_TOALTSTACK OP_TOALTSTACK) splits the commitment after 1 byte,
    * pushing the first byte to the altstack as an NFT type identifier and the
    * remaining segment of the commitment as the first NFT field value.
    *
    * If undefined (in a {@link SequentialNftCollection}), this field could be
-   * considered to have a default value of `00d26b` (OP_0 OP_UTXOTOKENCOMMITMENT
+   * considered to have a default value of `00cf6b` (OP_0 OP_UTXOTOKENCOMMITMENT
    * OP_TOALTSTACK), which takes the full contents of the commitment as a fixed
    * type index. As such, each index of the NFT category's `types` maps a
    * precise commitment value to the metadata for NFTs with that particular
